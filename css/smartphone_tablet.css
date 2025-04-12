@@ -1,0 +1,239 @@
+/*The rest of the flexible grid-layout stuff for the other pages is just in styles.css. The home page utilizes a grid, but required more finessing around to make it look correctly oriented for all screens. I couldn't just collapse it into one column. Therefore, I put the styling for the main page in a separate CSS folder.*/
+
+
+#homepage{
+    background-color: #5c9ab5;
+    display: flex;
+
+    width: 100vw;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-;
+}
+
+#search-engine{
+    background-color: #192020;
+
+    width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    border-radius: 0 5% 5% 5%;
+
+    position: absolute;
+    top: 20%;
+    left: 5%;
+
+
+    display: grid;
+    grid-template-rows:  1fr 1fr 4fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 5px;
+
+    grid-template-areas:
+    "title title title"
+    ". banner ."
+    ". search-bar ."
+
+}
+
+#title{grid-area: title;}
+#banner{grid-area: banner;}
+#search-bar{grid-area: search-bar;}
+
+/*Flexbox for the links on the main page*/
+
+#nav-links{
+    display: flex;
+
+    width: 120%;
+    height: 4%;
+
+    position: absolute;
+    top: 16%;
+    left: -15%;
+
+}
+
+@media (max-height: 600px){
+    #nav-links
+    {
+        height: 10%;
+
+        top: 10%;
+        width: 100%;
+    }
+}
+
+.tab{
+    background-color: #d2ddde;
+    border: 3px #192020 solid;
+    box-sizing: border-box;
+    padding-block: 3px;
+    border-radius: 30px 50px 0px 0px;
+
+    display: flex;
+    justify-content: center;
+
+    color: #192020;
+    font-family: Dongle, arial;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .tab{
+        font-size: 2em;
+    }
+}
+
+
+
+/* Styling for top thingy on a search page that tells you the web domain */
+
+#title{
+    background-color: #5c9ab5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    left: 2%;
+
+    width: 90%;
+    height: 40%;
+
+
+    margin-left: 10px;
+    border-radius: 50px;
+
+}
+
+
+
+#moogle{
+ font-family: Dongle, arial;
+ font-size: 2rem;
+ position: relative;
+ bottom: -1%;
+ left: 1%;
+}
+
+
+/* Styling for the banner name of my fake search engine*/
+
+#banner{
+    display: flex;
+
+    position: relative;
+    top: 50%;
+    left: 2%;
+    font-size: 4em;
+    letter-spacing: 0.2em;
+}
+
+/* Styling for search bar */
+
+#search-bar{
+    background-color: #d2ddde;
+
+    width: 100%;
+    height: 15%;
+
+    border-radius: 50px;
+
+    position: relative;
+    left: 0.5%;
+    top: 20%;
+}
+
+@media (min-width: 768px){
+    #search-bar{
+           width: 200%;
+           position: relative;
+           left: -50%;
+       }
+}
+
+#search-icon{
+    position: relative;
+    top: 15%;
+    left: 1%;
+}
+
+
+/* MEDIA QUERY COLOR SCHEME FOR HOME PAGE (for smaller screens, copied from regular styles.css where desktop styles exist)*/
+
+@media (prefers-color-scheme: dark)
+{
+
+    /* HOME PAGE COLOR SCHEME (original)*/
+        #homepage{
+            background-color: #192020;;
+        }
+    
+        #search-engine{
+            background-color: #d2ddde;
+        }
+    
+        .tab{
+            background-color: #5c9ab5;
+            border: 3px #192020 solid;
+            color: #192020;
+        }
+    
+        #title{
+            background-color: #5c9ab5;
+        }
+
+        .odd-letter{
+            color: #000000;
+        }
+
+        .even-letter{
+            color: #5c9ab5;
+        }
+    
+        #search-bar{
+            background-color: #5c9ab5;
+        }
+}
+  
+  @media (prefers-color-scheme: light) 
+  {
+    #homepage{
+        background-color: #5c9ab5;
+    }
+
+    #search-engine{
+        background-color: #192020;
+    }
+
+    .tab{
+        background-color: #d2ddde;
+        border: 3px #192020 solid;
+        color: #192020;
+    }
+
+    #title{
+        background-color: #5c9ab5;
+    }
+
+    .odd-letter{
+        color: #5c9ab5;
+    }
+
+    .even-letter{
+        color: #d2ddde;
+    }
+
+    #search-bar{
+        background-color: #d2ddde;
+    }
+
+  }

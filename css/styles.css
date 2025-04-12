@@ -1,0 +1,934 @@
+/* 
+INVICIBLE COLOR SCHEMES
+
+Mark Grayson:
+YELLOW = #ffe556
+BLUE = #00bcf0
+BLACK = #303539
+
+Omni-Man:
+RED = #c8412d
+LIGHT GREY = #e1ebed
+
+Atom Eve:
+DARK PINK = #ff91af
+LIGHT PINK = #f4c2c2
+
+Maulers:
+Blue: #5c9ab5
+Grey-white: #d2ddde
+Black: #192020
+*/
+a:hover{
+    text-decoration: line-through;
+}
+
+/*  HOME PAGE CSS */
+
+#homepage{
+    background-color: #5c9ab5;
+}
+
+#search-engine{
+    background-color: #192020;
+
+    width: 60%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    border-radius: 0 5% 5% 5%;
+
+    display: grid;
+    grid-template-rows:  1fr 1fr 4fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 5px;
+
+    grid-template-areas:
+    "title title title"
+    ". banner ."
+    ". search-bar ."
+
+}
+
+
+/*
+#title, #nav-links, #banner, #search-bar, #search-icon{
+    background-color: #d2ddde;
+}
+*/
+
+#title{grid-area: title;}
+#banner{grid-area: banner;}
+#search-bar{grid-area: search-bar;}
+
+/*
+#title, #search-bar, #banner, #search-icon{
+    border: 5px solid white;
+}
+*/
+
+/*Flexbox for the links on the main page*/
+
+#nav-links{
+    width: 65%;
+    height: 80%;
+    margin-left: 20%;
+    
+    position: relative;
+    top: 76px;
+
+    box-sizing: border-box;
+
+    display: flex;
+}
+
+.tab{
+    background-color: #d2ddde;
+    border: 3px #192020 solid;
+    box-sizing: border-box;
+    width: 36%;
+    padding-block: 3px;
+    border-radius: 30px 50px 0px 0px;
+
+    display: flex;
+    justify-content: center;
+
+    color: #192020;
+    font-family: Dongle, arial;
+    font-size: 1.6em;
+}
+/* Styling for top thingy on a search page that tells you the web domain */
+
+#title{
+    background-color: #5c9ab5;
+
+    position: relative;
+    top: 20px;
+
+    width: 80%;
+    height: 20%;
+
+
+    margin-left: 10px;
+    border-radius: 50px;
+}
+
+#moogle{
+ font-family: Dongle, arial;
+ position: relative;
+ bottom: 20%;
+ left: 4%;
+}
+
+
+/* Styling for the banner name of my fake search engine*/
+
+#banner{
+    display: flex;
+
+    position: relative;
+    top: 100%;
+    left: 4%;
+    font-size: 4em;
+    letter-spacing: 0.2em;
+}
+
+/* Styling for search bar */
+#search-bar{
+    background-color: #d2ddde;
+
+    width: 200%;
+    height: 15%;
+
+    border-radius: 50px;
+
+    position: relative;
+    right: 45%;
+    top: 35%;
+}
+
+#search-icon{
+    position: relative;
+    top: 15%;
+    left: 1%;
+}
+
+/*  POWERPLEX BLOG CSS  */
+
+/* PowerPlex Color Scheme
+
+Red: #a32526
+Bright Yellow: #fbf8c7
+Gold: #b0662f
+Black: #221511
+
+*/
+
+/*coloring and border of general blog*/
+#blog-bg{
+    background-color: #a32526;
+}
+
+#decoration{
+    border: 4px solid #fbf8c7;
+    width: 50%;
+    height: 100%;
+
+    margin: auto;
+}
+#blog-title, #blog-sidebar, #post{
+    border: 3px solid #b0662f;
+}
+
+/* Styling for title */
+#blog-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: Workbench;
+    font-size: 1em;
+    color: #a32526;
+}
+
+#back-to-home{
+    color: #b0662f;
+}
+
+#powerplex-banner{
+    margin: 10px;
+    opacity: 0.5;
+}
+
+#powerplex-banner:hover{
+    opacity:1;
+}
+
+#blog-title-layout{
+    display:flex;
+    justify-content: space-between;
+}
+
+/*Styling for main posts */
+#post1, #post2{
+    display:flex;
+    align-items: center;
+
+    margin: 5px;
+
+    border: 5px solid #a32526;
+
+}
+
+.text{
+    margin: 5px;
+}
+
+.post-title{
+    font-family: Dongle;
+    font-size: 1.3em;
+    line-height: 0.1em;
+    color: #a32526;
+    text-decoration: underline;
+}
+
+.post-capt{
+    font-family: Dongle, sans-serif;
+    font-size: 1.3em;
+    line-height: 1em;
+    color: #a32526;
+}
+
+.post-img{
+    margin:5px; 
+}
+
+/* css grid nicknames */
+
+#blog-title{grid-area: blog-title;}
+#blog-sidebar{grid-area: sidebar;}
+#post{grid-area: post;}
+
+/* DESKTOP CSS GRID*/
+
+@media only screen and (min-width: 1200px)
+{
+#blog{
+    background-color: #fbf8c7;
+    border: 4px solid #fbf8c7;
+    
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    left: 20px;
+    top: 20px;
+
+    margin: auto;
+    
+    display: grid;
+    grid-template-rows: 0.4fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
+
+    gap: 5px;
+
+    grid-template-areas:
+    "blog-title blog-title"
+    "sidebar post";
+    }
+}
+
+/* TABLET CSS GRID + RESPONSIVE STYLING */
+
+/*Was using developer tools, had to adjust from standard 480px to fit all the diff mobile devices on there, tried my best*/
+@media only screen and (min-width: 500px) and (max-width: 1200px)
+{
+    #blog {
+        background-color: #fbf8c7;
+        border: 4px solid #fbf8c7;
+
+        display: grid;
+        grid-template-rows: 0.1fr 0.1fr;
+        grid-template-columns: 0.6fr 1fr;
+    
+        gap: 5px;
+    
+        grid-template-areas:
+        "blog-title blog-title"
+        "sidebar post";
+    }
+
+    #decoration {
+        border: 4px solid #fbf8c7;
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        position: relative;
+        top: 120px;
+    }
+}
+
+/* MOBILE RESPONSIVE GRID AND STYLING */
+
+@media only screen and (max-width: 540px)
+{
+    #blog {
+
+        background-color: #fbf8c7;
+        border: 4px solid #fbf8c7;
+        
+        width: 100%;
+
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.0001fr 1fr;
+
+        grid-template-areas:
+            "blog-title"
+            "sidebar"
+            "post";
+        }
+
+    #powerplex-banner{
+        width: 400px;
+    }
+
+    #decoration{
+        border: 4px solid #fbf8c7;
+        width: 120%;
+
+
+        margin: auto;
+        
+        position: relative;
+        top: 50px;
+    }
+
+    #blog-sidebar{
+        height: 90%;
+    }
+
+    #spotify{
+        height: 150px;
+        margin: 10px;
+    }
+
+    #post{
+        position: relative;
+        top: -20px;
+    }
+
+    #post1, #post2{
+        font-size: 1em;    
+    }
+
+    .post-img{
+        height: 100px;
+    }
+
+}
+
+/*  INVINCIBLE INC AD CSS  */
+
+/* Invincible Inc Color Scheme
+dark cobalt: #224f60
+light blue: #78b7d4
+yellow: #f3d515
+white: #ffffff
+*/
+
+body{
+    background-color: #f3d515;
+}
+#ad-intro, #ad-img, #enemies-pic, #enemies-desc{
+    /*border: 3px solid black;*/
+    background-color: #78b7d4;
+}
+
+#ad-home-return{
+    font-family: Bebas Neue; 
+    color: #224f60; 
+    text-decoration: underline;
+    font-size: 1.5em;
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    right: 15px;
+    margin: 10px;
+}
+
+
+#inc-title{
+    margin: auto; 
+    
+    text-align:center; 
+    font-family: Bebas Neue; 
+    color: #224f60; 
+
+    font-size: 4em;
+}
+
+#ad-intro{
+    border: 10px solid #224f60;
+    padding: 5px;
+}
+
+#enemies-pic{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #f3d515;
+
+}
+
+.intro-text{
+    color: #224f60;
+    font-family: Walter Turncoat, sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#ad-img{
+    background-color: #f3d515;
+}
+#ad-img{
+    text-align: left;
+
+    background-color: #f3d515;
+}
+
+.enemy-profile{
+    width: 100%;
+}
+
+#enemies-desc{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #f3d515;
+}
+
+.enemy-desc{
+    width: 30%;
+
+    text-align: center; /*I had to look this up*/
+
+    border: 5px solid #224f60;
+    background-color: #78b7d4;
+
+    color: #224f60;
+    font-family: Walter Turncoat, sans-serif;
+}
+
+
+#enemies-pic{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #f3d515;
+
+}
+
+
+.enemy-pic{
+    width: 30%;
+
+    /*
+
+    background-color: #78b7d4;
+    */
+}
+
+#ad-intro{grid-area: ad-intro;}
+#ad-img{grid-area: ad-img;}
+#enemies-desc{grid-area: enemies-desc;}
+#enemies-pic{grid-area: enemies-pic;}
+
+
+/* DESKTOP RESPONSIVE CSS GRID */
+@media only screen and (min-width: 1200px)
+{
+    #ad{
+        background-color: #f3d515;
+
+        width: 90%;
+        height: 100vh;
+
+        margin: auto;
+
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+
+        grid-template-areas:
+        "ad-intro ad-img"
+        "enemies-desc enemies-desc"
+        "enemies-pic enemies-pic";
+
+    }
+
+    .enemy-profile { 
+        /*Had to look this up so the addition of the div that was meant to help center eneemy desc and imgs on mobile didn't mess w my desktop layout*/
+        display: contents;
+    }
+
+    .enemy-desc{
+        margin-bottom: 5%;
+        align-items: center;
+    }
+
+    .enemy-pic{
+        position: relative;
+        bottom: 10%;
+        left: 5%;
+    }
+
+    #ad-img{
+        display: block;
+        margin: 0 auto;
+        width: 512px;     /* Original image width */
+        max-width: 100%;  /* Prevent overflow on small screens */
+        height: auto;
+    }
+}
+
+/* TABLET RESPONSIVE CSS GRID AND STYLING */
+@media only screen and (min-width: 500px) and (max-width: 1200px)
+{   #ad{
+        background-color: #f3d515;
+
+        width: 100%;
+        height: 100vh;
+
+        margin: auto;
+
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+
+        grid-template-areas:
+        "ad-intro ad-img"
+        "enemies-desc enemies-desc"
+        "enemies-pic enemies-pic";
+    }
+    
+    #ad-img{
+        position: relative;
+        top: 4%;
+        padding: 0;
+    }
+
+    .enemy-profile { 
+        /*Had to look this up so the addition of the div that was meant to help center eneemy desc and imgs on mobile didn't mess w my desktop layout*/
+        display: contents;
+    }
+
+
+}
+
+/*MOBILE RESPONSIVE CSS GRID AND STYLING*/
+@media only screen and (max-width: 600px)
+{
+    #ad{
+        background-color: #f3d515;
+    
+        height: 100vh;
+    
+        display: grid; /*1 column layout*/
+        grid-template-columns: 90% auto;;
+        grid-template-areas:
+        "ad-intro ad-intro"
+        "ad-img ad-img"
+        "enemies-desc enemies-desc"
+        "enemies-pic enemies-pic";
+    }
+
+    #inc-title{
+        font-family: Bebas Neue; 
+        color: #224f60; 
+
+        position: relative;
+        right: 5%;;
+
+        font-size: 4em;
+    }
+
+    #ad-home-return{
+        position: relative;
+        right: 18%;
+    }
+    
+    #ad-intro{ /*Formatting title to be on the left rather than the middle*/
+        border: 10px solid #224f60;
+        padding: 5px;
+        width: 80%;
+
+        position: relative;
+        left: 5.5%;
+
+    }
+
+    
+    .intro-text{
+        color: #224f60;
+        font-family: Walter Turncoat, sans-serif;
+        font-size: 1em;
+    }
+    
+    #ad-img{
+        position: relative;
+        top: 10%;
+        left: 5%;
+    }
+
+    #enemies-pic{  /*Adjusting imgs position so pics and desc are side by side*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        position: relative;
+        left: 53%;
+        bottom: 48%;
+    
+        background-color: #f3d515;
+    
+    }
+
+    .enemy-pic{
+        margin: 30%
+    }
+
+    #enemies-desc{ /*Adjusting desc position so pics and desc are side by side*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        gap: 20px;
+    
+        position: relative;
+        top: 5%;
+        left: 10%;
+
+        background-color: #f3d515;
+    }
+
+    .enemy-desc{
+        width: 40%;
+    
+        text-align: center; /*I had to look this up*/
+    
+        border: 5px solid #224f60;
+        background-color: #78b7d4;
+    
+        color: #224f60;
+        font-family: Walter Turncoat, sans-serif;
+    }
+    
+    #invincible-img {
+        width: 95vw;
+        max-width: none; /* override default 100% max if necessary */
+    }
+}
+
+/*DARK AND LIGHT MODE MEDIA QUERIES*/
+
+    /*Powerplex blog's in light mode, so changes to orginal color scheme exist in dark mode*/
+
+    /*Invincible Inc ad is in light mode, o changes to orginal color scheme exist in dark mode*/
+
+    @media (prefers-color-scheme: dark)
+    {
+    
+        /* HOME PAGE COLOR SCHEME (original)*/
+            #homepage{
+                background-color: #192020;;
+            }
+        
+            #search-engine{
+                background-color: #d2ddde;
+            }
+        
+            .tab{
+                background-color: #5c9ab5;
+                border: 3px #192020 solid;
+                color: #192020;
+            }
+        
+            #title{
+                background-color: #5c9ab5;
+            }
+    
+            .odd-letter{
+                color: #000000;
+            }
+    
+            .even-letter{
+                color: #5c9ab5;
+            }
+        
+            #search-bar{
+                background-color: #5c9ab5;
+            }
+
+        /*POWERPLEX BLOG COLOR SCHEME: CHANGED */
+
+            #blog-bg{
+                background-color: #000000;
+            }
+
+            #blog {
+
+                background-color: #a32526;
+                border: 4px solid #a32526;
+            }
+            #blog-title, #blog-sidebar, #post{
+                border: 3px solid #fbf8c7;
+            }
+
+            #decoration{
+                border: 4px solid #fbf8c7;
+            }
+
+            #blog-title{
+                color: #fbf8c7;;
+            }
+
+            #back-to-home{
+                color: #fbf8c7;;
+            }
+
+            #post1, #post2{
+                border: 5px solid #fbf8c7;;
+            }
+
+            .post-title{
+                color: #fbf8c7;;
+            }
+            
+            .post-capt{
+                color: #fbf8c7;;
+            }
+
+        /*INVINCLE INC COLOR SCHEME: CHANGED*/
+        body{
+            background-color: #224f60;
+        }
+
+        #ad{
+            background-color: #224f60;
+        }
+
+        #ad-intro, #ad-img, #enemies-pic, #enemies-desc{
+            /*border: 3px solid black;*/
+            background-color: #f3d515;
+        }
+
+        #ad-intro{
+            border: 10px solid #78b7d4;
+        }
+
+        #return-link{
+            color: #78b7d4; 
+        }
+
+        #inc-title{
+            color: #f3d515; 
+        }
+
+        .intro-text{
+            color: #224f60;
+        }
+        
+        #ad-img{
+            background-color: #224f60;
+        }
+
+        #enemies-pic{
+            background-color: #224f60;
+        }
+
+
+        #enemies-desc{
+            background-color: #224f60;
+        }
+        
+        .enemy-desc{
+            border: 5px solid #78b7d4;
+            background-color: #f3d515;
+            color: #224f60;
+        }
+
+    }
+      
+      @media (prefers-color-scheme: light) 
+      {
+
+        /*HOMEPAGE COLOR SCHEME: CHANGED */
+            #homepage{
+                background-color: #5c9ab5;
+            }
+        
+            #search-engine{
+                background-color: #192020;
+            }
+        
+            .tab{
+                background-color: #d2ddde;
+                border: 3px #192020 solid;
+                color: #192020;
+            }
+        
+            #title{
+                background-color: #5c9ab5;
+            }
+        
+            .odd-letter{
+                color: #5c9ab5;
+            }
+        
+            .even-letter{
+                color: #d2ddde;
+            }
+        
+            #search-bar{
+                background-color: #d2ddde;
+            }
+        
+        /*POWERPLEX BLOG COLOR SCHEME: ORIGINAL */
+            #blog-bg{
+                background-color: #a32526;
+            }
+
+            #blog {
+
+                background-color: #fbf8c7;
+                border: 4px solid #fbf8c7;
+            }
+
+            #blog-title, #blog-sidebar, #post{
+                border: 3px solid #b0662f;
+            }
+
+            #decoration{
+                border: 4px solid #fbf8c7;
+            }
+
+            #blog-title{
+                color: #a32526;
+            }
+
+            #back-to-home{
+                color: #b0662f;
+            }
+
+            #post1, #post2{
+                border: 5px solid #a32526;
+            }
+
+            .post-title{
+                color: #a32526;
+            }
+            
+            .post-capt{
+                color: #a32526;
+            }
+
+        /*INVINCLE INC COLOR SCHEME: ORIGINAL*/
+        body{
+            background-color: #f3d515;
+        }
+
+        #ad-intro, #ad-img, #enemies-pic, #enemies-desc{
+            /*border: 3px solid black;*/
+            background-color: #78b7d4;
+        }
+
+        #ad-intro{
+            border: 10px solid #224f60;
+        }
+
+        #ad-home-return{
+            color: #224f60; 
+        }
+
+        #inc-title{
+            color: #224f60; 
+        }
+
+        .intro-text{
+            color: #224f60;
+        }
+
+        #ad-img{
+            background-color: #f3d515;
+        }
+
+        #ad-img{
+            background-color: #f3d515;
+        }
+
+        #enemies-pic{
+            background-color: #f3d515;
+        }
+
+        #enemies-desc{
+            background-color: #f3d515;
+        }
+
+        .enemy-desc{
+            border: 5px solid #224f60;
+            background-color: #78b7d4;
+            color: #224f60;
+        }
+      }
